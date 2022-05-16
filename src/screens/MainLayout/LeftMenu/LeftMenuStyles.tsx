@@ -30,10 +30,16 @@ const closedMixin = (theme: Theme): CSSObject => ({
     },
 });
 
-export const ListItem = styled(MuiListItem)<ListItemBaseProps>(({theme}) => ({
+export const ListItem = styled(MuiListItem)<ListItemBaseProps>(({theme, }) => ({
     display: 'block',
     "&.Mui-selected": {
         backgroundColor: theme.palette.primary.dark,
+        '& .MuiListItemIcon-root': {
+            color: theme.palette.success.light,
+        },
+        '& .MuiListItemText-root': {
+            color: theme.palette.success.light,
+        },
     },
 }))
 

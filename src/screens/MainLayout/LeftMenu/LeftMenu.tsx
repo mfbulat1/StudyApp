@@ -30,8 +30,13 @@ const LeftMenu: FC<LeftMenuPropsType> = ({isOpen}) => {
                     return <>
                         {divider
                             ? <Divider key={id} sx={{borderColor: theme.palette.primary.contrastText}}/>
-                            : <ListItem key={id} disablePadding title={title} onClick={() => onItemClick(path, id)}
-                                        selected={selectedIndex === id}>
+                            : <ListItem
+                                key={id}
+                                disablePadding
+                                title={title}
+                                onClick={() => onItemClick(path, id)}
+                                selected={selectedIndex === id}
+                            >
                                 <ListItemButton>
                                     <ListItemIcon>
                                         {icon}
