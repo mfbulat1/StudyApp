@@ -4,7 +4,7 @@ import {createGlobalStyle} from "styled-components";
 import {createTheme, ThemeProvider} from "@mui/material";
 import Profile from "./Profile/Profile";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {menuData} from "../utils/mockData";
+import {routesData} from "../utils/mockData";
 
 const Global = createGlobalStyle`
   * {
@@ -17,7 +17,10 @@ const Global = createGlobalStyle`
 const darkTheme = createTheme({
     palette: {
         // mode: 'light',
-        primary: {
+        // primary: {
+        //     main: '#5048e5',
+        // },
+        secondary: {
             main: '#101d2d',
         },
     },
@@ -30,7 +33,7 @@ const Main = () => {
                 <Global/>
                 <MainLayout>
                     <Routes>
-                        {menuData.map(item => <Route path={item.path} element={item.component}/>)}
+                        {routesData.map(item => <Route path={item.path} element={item.component}/>)}
                         <Route path={'/'} element={<Profile/>}/>
                     </Routes>
                 </MainLayout>

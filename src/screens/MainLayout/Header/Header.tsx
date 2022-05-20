@@ -8,7 +8,8 @@ import {styled} from "@mui/material/styles";
 import MuiAppBar, {AppBarProps} from "@mui/material/AppBar";
 
 
-const AppBar = styled(MuiAppBar)<AppBarProps>(() => ({
+const AppBar = styled(MuiAppBar)<AppBarProps>(({theme}) => ({
+    background: theme.palette.secondary.main,
     width: '100%',
     position: 'sticky',
     top: 0,

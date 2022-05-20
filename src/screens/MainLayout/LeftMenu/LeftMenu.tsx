@@ -1,7 +1,7 @@
 import React, {FC, useState} from 'react';
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import {menuData} from "../../../utils/mockData";
+import {menuRoutesData} from "../../../utils/mockData";
 import {useNavigate} from "react-router-dom";
 import {useTheme} from "@mui/material/styles";
 import {Drawer, DrawerHeader, ListItem, ListItemButton, ListItemIcon, ListItemText} from "./LeftMenuStyles";
@@ -25,7 +25,7 @@ const LeftMenu: FC<LeftMenuPropsType> = ({isOpen}) => {
             <DrawerHeader/>
             <Divider sx={{borderColor: theme.palette.primary.contrastText}}/>
             <List disablePadding>
-                {menuData.map((item) => {
+                {menuRoutesData.map((item) => {
                     const {id, title, path, icon, divider} = item
                     return <>
                         {divider

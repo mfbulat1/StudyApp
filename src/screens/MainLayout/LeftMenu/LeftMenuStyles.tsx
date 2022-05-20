@@ -33,7 +33,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
 export const ListItem = styled(MuiListItem)<ListItemBaseProps>(({theme, }) => ({
     display: 'block',
     "&.Mui-selected": {
-        backgroundColor: theme.palette.primary.dark,
+        backgroundColor: theme.palette.secondary.dark,
         '& .MuiListItemIcon-root': {
             color: theme.palette.success.light,
         },
@@ -53,12 +53,11 @@ export const ListItemIcon = styled(MuiListItemIcon)<ListItemIconProps>(({theme})
     minWidth: 0,
     marginRight: 30,
     justifyContent: 'center',
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.secondary.contrastText,
 }))
 
 export const ListItemText = styled(MuiListItemText)<ListItemTextProps>(({theme}) => ({
-    color: theme.palette.primary.contrastText,
-    // color: '#2bbf96'  //selected
+    color: theme.palette.secondary.contrastText,
 }))
 
 export const DrawerHeader = styled('div')(({theme}) => ({
@@ -85,8 +84,8 @@ export const Drawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== '
             }
         ),
         '& .css-12i7wg6-MuiPaper-root-MuiDrawer-paper': {
-            background: theme.palette.primary.main,
-            borderRight: `1px solid ${theme.palette.primary.contrastText}`,
+            background: theme.palette.secondary.main,
+            borderRight: `1px solid ${theme.palette.secondary.contrastText}`,
             msOverflowStyle: 'none',
             scrollbarWidth: 'none',
         },
