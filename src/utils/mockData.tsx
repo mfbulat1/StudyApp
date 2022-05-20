@@ -10,7 +10,7 @@ import Schedule from "../screens/Schedule/Schedule";
 import Courses from "../screens/Courses/Courses";
 import Favorites from "../screens/Favorites/Favorites";
 import Posts from "../screens/Posts/Posts";
-import Subject from "../screens/Subject/Subject";
+import Course from "../screens/Subject/Course";
 
 export const menuRoutesData = [
     {
@@ -65,9 +65,9 @@ export const someRoutes = [
     {
         id: 8,
         title: 'Курс',
-        path: '/subject',
+        path: '/course',
         icon: null,
-        component: <Subject/>,
+        component: <Course/>,
     },
  ]
 
